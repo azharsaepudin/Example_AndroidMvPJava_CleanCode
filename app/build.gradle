@@ -11,9 +11,9 @@ android {
         versionCode 1
         versionName "1.0"
 
-        buildConfigField "int","LIMIT","100"
-        buildConfigField "String", "BASEURL", "\"http://private-b8cf44-androidcleancode.apiary-mock.com/\""
-        buildConfigField "int","CACHETIME","432000"
+        buildConfigField "int", "LIMIT", "100"
+        buildConfigField "String", "BASEURL", "\"http://192.168.1.28:8080/mahasiswa/api/\""
+        buildConfigField "int", "CACHETIME", "432000"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

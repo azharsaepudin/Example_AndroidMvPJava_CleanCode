@@ -9,24 +9,24 @@ import java.util.List;
 
 public class CityListResponse {
 
-    @SerializedName("data")
+    @SerializedName("status")
     @Expose
-    private List<CityListData> data = new ArrayList<CityListData>();
+    private boolean status;
 
     @SerializedName("message")
     @Expose
     private String message;
 
-    @SerializedName("status")
+    @SerializedName("data")
     @Expose
-    private int status;
+    private List<CityListData> data = new ArrayList<CityListData>();
 
-    public List<CityListData> getData(){
-        return data;
+    public boolean getStatus(){
+        return status;
     }
 
-    public void setData(List<CityListData> data){
-        this.data = data;
+    public void setStatus(boolean status){
+        this.status = status;
     }
 
     public String getMessage(){
@@ -37,11 +37,11 @@ public class CityListResponse {
         this.message = message;
     }
 
-    public int getStatus(){
-        return status;
+    public List<CityListData> getData(){
+        return data;
     }
 
-    public void setStatus(int status){
-        this.status = status;
+    public void setData(List<CityListData> data){
+        this.data = data;
     }
 }

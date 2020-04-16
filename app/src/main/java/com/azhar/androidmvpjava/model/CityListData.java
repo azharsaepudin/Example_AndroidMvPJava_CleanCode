@@ -1,51 +1,50 @@
 package com.azhar.androidmvpjava.model;
 
 public class CityListData {
-	private String background;
-	private String name;
-	private String description;
-	private String id;
+	//private String background;
+	private String NAMA;
+	private String NPM;
+	private String NO;
 
-	public void setBackground(String background){
-		this.background = background;
+//	public void setBackground(String background){
+//		this.background = background;
+//	}
+//
+//	public String getBackground(){
+//		return background;
+//	}
+
+	public void setName(String NAMA){
+		this.NAMA = NAMA;
 	}
 
-	public String getBackground(){
-		return background;
+	public String getNAMA(){
+		return NAMA;
 	}
 
-	public void setName(String name){
-		this.name = name;
+	public void setNPM(String NPM){
+		this.NPM = NPM;
 	}
 
-	public String getName(){
-		return name;
+	public String getNPM(){
+		return NPM;
 	}
 
-	public void setDescription(String description){
-		this.description = description;
+	public void setNO(String NO){
+		this.NO = NO;
 	}
 
-	public String getDescription(){
-		return description;
-	}
-
-	public void setId(String id){
-		this.id = id;
-	}
-
-	public String getId(){
-		return id;
+	public String getNO(){
+		return NO;
 	}
 
 	@Override
  	public String toString(){
 		return 
-			"Response{" + 
-			"background = '" + background + '\'' + 
-			",name = '" + name + '\'' + 
-			",description = '" + description + '\'' + 
-			",id = '" + id + '\'' + 
+			"Response{" +
+			"NAMA = '" + NAMA + '\'' +
+			",description = '" + NPM + '\'' +
+			",id = '" + NO + '\'' +
 			"}";
 		}
 }

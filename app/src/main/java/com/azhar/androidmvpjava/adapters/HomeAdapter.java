@@ -44,14 +44,14 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
     holder.click(data.get(position),  listener);
-    holder.tvCity.setText(data.get(position).getName());
-    holder.tvDesc.setText(data.get(position).getDescription());
+    holder.tvCity.setText(data.get(position).getNAMA());
+    holder.tvDesc.setText(data.get(position).getNPM());
 
-    String images = data.get(position).getBackground();
-
-    Glide.with(context)
-            .load(images)
-            .into(holder.background);
+//    String images = data.get(position).getBackground();
+//
+//    Glide.with(context)
+//            .load(images)
+//            .into(holder.background);
     }
 
     @Override
@@ -73,7 +73,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
             tvCity = itemView.findViewById(R.id.city);
             tvDesc = itemView.findViewById(R.id.hotel);
-            background = itemView.findViewById(R.id.image);
+            //background = itemView.findViewById(R.id.image);
 
         }
 
