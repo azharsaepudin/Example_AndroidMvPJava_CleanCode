@@ -1,13 +1,13 @@
 package com.azhar.androidmvpjava.model.response;
 
-import com.azhar.androidmvpjava.model.CityListData;
+import com.azhar.androidmvpjava.model.MhsListData;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CityListResponse {
+public class MhsListResponse {
 
     @SerializedName("status")
     @Expose
@@ -19,7 +19,7 @@ public class CityListResponse {
 
     @SerializedName("data")
     @Expose
-    private List<CityListData> data = new ArrayList<CityListData>();
+    private List<MhsListData> data = new ArrayList<MhsListData>();
 
     public boolean getStatus(){
         return status;
@@ -37,11 +37,11 @@ public class CityListResponse {
         this.message = message;
     }
 
-    public List<CityListData> getData(){
+    public List<MhsListData> getData(){
         return data;
     }
 
-    public void setData(List<CityListData> data){
+    public void setData(List<MhsListData> data){
         this.data = data;
     }
 }

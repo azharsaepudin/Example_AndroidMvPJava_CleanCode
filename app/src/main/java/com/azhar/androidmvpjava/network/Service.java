@@ -1,6 +1,6 @@
 package com.azhar.androidmvpjava.network;
 
-import com.azhar.androidmvpjava.model.response.CityListResponse;
+import com.azhar.androidmvpjava.model.response.MhsListResponse;
 
 import rx.Observable;
 import rx.Subscriber;
@@ -22,13 +22,13 @@ public class Service {
         return networkService.getCityList()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .onErrorResumeNext(new Func1<Throwable, Observable<? extends CityListResponse>>() {
+                .onErrorResumeNext(new Func1<Throwable, Observable<? extends MhsListResponse>>() {
                     @Override
-                    public Observable<? extends CityListResponse> call(Throwable throwable) {
+                    public Observable<? extends MhsListResponse> call(Throwable throwable) {
                         return Observable.error(throwable);
                     }
                 })
-                .subscribe(new Subscriber<CityListResponse>() {
+                .subscribe(new Subscriber<MhsListResponse>() {
                     @Override
                     public void onCompleted() {
 
@@ -40,8 +40,8 @@ public class Service {
                     }
 
                     @Override
-                    public void onNext(CityListResponse cityListResponse) {
-                        callback.onSuccess(cityListResponse);
+                    public void onNext(MhsListResponse mhsListResponse) {
+                        callback.onSuccess(mhsListResponse);
                     }
                 });
     }
@@ -51,13 +51,13 @@ public class Service {
         return networkService.inputData(npm,nama)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .onErrorResumeNext(new Func1<Throwable, Observable<? extends CityListResponse>>() {
+                .onErrorResumeNext(new Func1<Throwable, Observable<? extends MhsListResponse>>() {
                     @Override
-                    public Observable<? extends CityListResponse> call(Throwable throwable) {
+                    public Observable<? extends MhsListResponse> call(Throwable throwable) {
                         return Observable.error(throwable);
                     }
                 })
-                .subscribe(new Subscriber<CityListResponse>() {
+                .subscribe(new Subscriber<MhsListResponse>() {
                     @Override
                     public void onCompleted() {
 
@@ -69,8 +69,8 @@ public class Service {
                     }
 
                     @Override
-                    public void onNext(CityListResponse cityListResponse) {
-                        callback.onSuccessInput(cityListResponse);
+                    public void onNext(MhsListResponse mhsListResponse) {
+                        callback.onSuccessInput(mhsListResponse);
                     }
                 });
     }
@@ -80,13 +80,13 @@ public class Service {
         return networkService.updateData(npm,nama)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .onErrorResumeNext(new Func1<Throwable, Observable<? extends CityListResponse>>() {
+                .onErrorResumeNext(new Func1<Throwable, Observable<? extends MhsListResponse>>() {
                     @Override
-                    public Observable<? extends CityListResponse> call(Throwable throwable) {
+                    public Observable<? extends MhsListResponse> call(Throwable throwable) {
                         return Observable.error(throwable);
                     }
                 })
-                .subscribe(new Subscriber<CityListResponse>() {
+                .subscribe(new Subscriber<MhsListResponse>() {
                     @Override
                     public void onCompleted() {
 
@@ -98,8 +98,8 @@ public class Service {
                     }
 
                     @Override
-                    public void onNext(CityListResponse cityListResponse) {
-                        callback.onSuccessUpdate(cityListResponse);
+                    public void onNext(MhsListResponse mhsListResponse) {
+                        callback.onSuccessUpdate(mhsListResponse);
                     }
                 });
     }
@@ -109,14 +109,14 @@ public class Service {
         return networkService.deleteData(npm)
                 .subscribeOn(Schedulers.io())
                 .subscribeOn(AndroidSchedulers.mainThread())
-                .onErrorResumeNext(new Func1<Throwable, Observable<? extends CityListResponse>>() {
+                .onErrorResumeNext(new Func1<Throwable, Observable<? extends MhsListResponse>>() {
                     @Override
-                    public Observable<? extends CityListResponse> call(Throwable throwable) {
+                    public Observable<? extends MhsListResponse> call(Throwable throwable) {
                         return Observable.error(throwable);
 
                     }
                 })
-                .subscribe(new Subscriber<CityListResponse>() {
+                .subscribe(new Subscriber<MhsListResponse>() {
                     @Override
                     public void onCompleted() {
 
@@ -128,20 +128,20 @@ public class Service {
                     }
 
                     @Override
-                    public void onNext(CityListResponse cityListResponse) {
-                        callback.onSuccessDelete(cityListResponse);
+                    public void onNext(MhsListResponse mhsListResponse) {
+                        callback.onSuccessDelete(mhsListResponse);
                     }
                 });
     }
 
     public interface GetCityListCallback {
-        void onSuccess(CityListResponse cityListResponse);
+        void onSuccess(MhsListResponse mhsListResponse);
 
         void onError(NetworkError networkError);
     }
 
     public interface InputDataCallback{
-        void onSuccessInput(CityListResponse cityListResponse);
+        void onSuccessInput(MhsListResponse mhsListResponse);
 
         void onError(NetworkError networkError);
     }
@@ -150,13 +150,13 @@ public class Service {
 
         void onError(NetworkError networkError);
 
-        void onSuccessUpdate(CityListResponse cityListResponse);
+        void onSuccessUpdate(MhsListResponse mhsListResponse);
     }
 
     public interface DeleteDataCallback{
 
         void onError(NetworkError networkError);
 
-        void onSuccessDelete(CityListResponse cityListResponse);
+        void onSuccessDelete(MhsListResponse mhsListResponse);
     }
 }

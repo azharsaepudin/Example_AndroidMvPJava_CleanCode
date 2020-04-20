@@ -1,6 +1,6 @@
 package com.azhar.androidmvpjava.ui.update;
 
-import com.azhar.androidmvpjava.model.response.CityListResponse;
+import com.azhar.androidmvpjava.model.response.MhsListResponse;
 import com.azhar.androidmvpjava.network.NetworkError;
 import com.azhar.androidmvpjava.network.Service;
 
@@ -32,7 +32,7 @@ public class UpdatePresenter {
             }
 
             @Override
-            public void onSuccessUpdate(CityListResponse cityListResponse) {
+            public void onSuccessUpdate(MhsListResponse cityListResponse) {
 
                 updateView.removeWait();
                 updateView.updateDataSuccess(cityListResponse);

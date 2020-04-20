@@ -1,6 +1,6 @@
 package com.azhar.androidmvpjava.ui.delete;
 
-import com.azhar.androidmvpjava.model.response.CityListResponse;
+import com.azhar.androidmvpjava.model.response.MhsListResponse;
 import com.azhar.androidmvpjava.network.NetworkError;
 import com.azhar.androidmvpjava.network.Service;
 
@@ -32,7 +32,7 @@ public class DeletePresenter {
             }
 
             @Override
-            public void onSuccessDelete(CityListResponse cityListResponse) {
+            public void onSuccessDelete(MhsListResponse cityListResponse) {
                 deleteView.removeWait();
                 deleteView.onSuccessUpdate(cityListResponse);
             }

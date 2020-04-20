@@ -1,13 +1,11 @@
 package com.azhar.androidmvpjava.ui.update;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ProgressBar;
 
 import com.azhar.androidmvpjava.BaseApp;
 import com.azhar.androidmvpjava.R;
-import com.azhar.androidmvpjava.model.response.CityListResponse;
+import com.azhar.androidmvpjava.model.response.MhsListResponse;
 import com.azhar.androidmvpjava.network.Service;
 
 import javax.inject.Inject;
@@ -51,7 +49,7 @@ public class UpdateActivity extends BaseApp implements UpdateView {
     }
 
     @Override
-    public void updateDataSuccess(CityListResponse cityListResponse) {
+    public void updateDataSuccess(MhsListResponse mhsListResponse) {
 
     }
 }

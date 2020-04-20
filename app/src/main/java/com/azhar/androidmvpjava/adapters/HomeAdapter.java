@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,10 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.azhar.androidmvpjava.R;
-import com.azhar.androidmvpjava.model.CityListData;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.annotation.GlideModule;
-import com.bumptech.glide.module.AppGlideModule;
+import com.azhar.androidmvpjava.model.MhsListData;
 
 
 import java.util.List;
@@ -23,11 +19,11 @@ import java.util.List;
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
     private final OnItemClickListener listener;
-    private List<CityListData> data;
+    private List<MhsListData> data;
     private Context context;
 
 
-    public HomeAdapter(Context context, List<CityListData> data, OnItemClickListener listener) {
+    public HomeAdapter(Context context, List<MhsListData> data, OnItemClickListener listener) {
         this.data = data;
         this.listener = listener;
         this.context = context;
@@ -60,7 +56,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
     }
 
     public interface OnItemClickListener {
-        void onClick(CityListData Item);
+        void onClick(MhsListData Item);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -77,12 +73,12 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.ViewHolder> {
 
         }
 
-        public void click(final CityListData cityListData, final OnItemClickListener listener){
+        public void click(final MhsListData mhsListData, final OnItemClickListener listener){
             itemView.setOnClickListener(new View.OnClickListener(){
 
                 @Override
                 public void onClick(View v) {
-                    listener.onClick(cityListData);
+                    listener.onClick(mhsListData);
                 }
             });
         }

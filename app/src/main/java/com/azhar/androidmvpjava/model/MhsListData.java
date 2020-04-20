@@ -1,6 +1,6 @@
 package com.azhar.androidmvpjava.model;
 
-public class CityListData {
+public class MhsListData {
 	//private String background;
 	private String NAMA;
 	private String NPM;

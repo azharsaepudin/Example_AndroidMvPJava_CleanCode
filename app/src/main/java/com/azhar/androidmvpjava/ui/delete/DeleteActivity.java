@@ -1,13 +1,11 @@
 package com.azhar.androidmvpjava.ui.delete;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.ProgressBar;
 
 import com.azhar.androidmvpjava.BaseApp;
 import com.azhar.androidmvpjava.R;
-import com.azhar.androidmvpjava.model.response.CityListResponse;
+import com.azhar.androidmvpjava.model.response.MhsListResponse;
 import com.azhar.androidmvpjava.network.Service;
 
 import javax.inject.Inject;
@@ -48,7 +46,7 @@ public class DeleteActivity extends BaseApp implements DeleteView {
     }
 
     @Override
-    public void onSuccessUpdate(CityListResponse cityListResponse) {
+    public void onSuccessUpdate(MhsListResponse mhsListResponse) {
 
     }
 
